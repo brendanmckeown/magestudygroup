@@ -6,6 +6,9 @@ sudo apt-get -y install mysql-server-5.5 php5-mysql libsqlite3-dev apache2 php5 
 # php extensions required for magento
 sudo apt-get -y install php5-mcrypt curl libcurl3 libcurl3-dev php5-curl php5-gd
 
+# command line utilities
+sudo apt-get install ack
+
 
 # Set timezone
 echo "America/New_York" | sudo tee /etc/timezone

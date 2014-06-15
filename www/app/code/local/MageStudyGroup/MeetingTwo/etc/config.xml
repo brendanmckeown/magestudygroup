@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category    Package
+ * @package     Package_Module
+ * @copyright   Copyright (c) 2013 True Action (http://www.trueaction.com)
+ */
+-->
+<config>
+	<modules>
+		<MageStudyGroup_MeetingTwo>
+			<version>0.1.0</version>
+		</MageStudyGroup_MeetingTwo>
+	</modules>
+	<global>
+		<models>
+			<sales>
+				<rewrite>
+					<order>MageStudyGroup_MeetingTwo_Model_Sales_Order</order>
+				</rewrite>
+			</sales>
+		</models>
+	</global>
+	<frontend>
+		<events>
+			<controller_action_predispatch_cms>
+				<observers>
+					<magestudygroup_meetingtwo>
+						<type>model</type>
+						<class>MageStudyGroup_MeetingTwo_Model_Observer</class>
+						<method>redirectCmsHomeKey</method>
+					</magestudygroup_meetingtwo>
+				</observers>
+			</controller_action_predispatch_cms>
+		</events>
+		<routers>
+			<magestudygroup_meetingtwo>
+				<use>standard</use>
+				<args>
+					<module>MageStudyGroup_MeetingTwo</module>
+					<frontName>meetingtwo</frontName>
+				</args>
+			</magestudygroup_meetingtwo>
+		</routers>
+	</frontend>
+</config>
