@@ -41,6 +41,13 @@
 					<frontName>meetingtwo</frontName>
 				</args>
 			</magestudygroup_meetingtwo>
+			<customer>
+				<args>
+					<modules>
+						<meetingtwo before="Mage_Customer">MageStudyGroup_MeetingTwo_Customer</meetingtwo>
+					</modules>
+				</args>
+			</customer>
 		</routers>
 	</frontend>
 </config>
