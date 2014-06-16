@@ -23,4 +23,25 @@ class MageStudyGroup_MeetingTwo_Model_Observer extends Mage_Core_Model_Abstract
             $action->getRequest()->setDispatched(true);
 		}
 	}
+
+	/**
+	 * Create a dynamic rewrite of the payment/data helper only
+	 * if the version of Magento is older than version 1.4, and
+	 * if the ccsave payment option is enabled for the current store.
+	 *
+	 * http://magento-quickies.alanstorm.com/post/41293158874/programmatically-undo-a-magento-rewrite
+	 *
+	 * @return void
+	 */
+	public function dynamicRewriteHelper($observer)
+	{
+		if (version_compare(Mage::getVersion(), '1.4.0', '<')) {
+			if (Mage::getStoreConfigFlag('payment/ccsave/active')) {
+				Mage::getConfig()->setNode(
+					'global/helpers/payment/rewrite/data',
+					'MageStudyGroup_MeetingTwo_Helper_Payment_Data'
+				);
+			}
+		}
+	}
 }

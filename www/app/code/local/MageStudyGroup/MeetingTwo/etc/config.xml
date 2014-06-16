@@ -20,6 +20,17 @@
 				</rewrite>
 			</sales>
 		</models>
+		<events>
+			<controller_action_predispatch>
+				<observers>
+					<magestudygroup_meetingtwo>
+						<type>model</type>
+						<class>MageStudyGroup_MeetingTwo_Model_Observer</class>
+						<method>dynamicRewriteHelper</method>
+					</magestudygroup_meetingtwo>
+				</observers>
+			</controller_action_predispatch>
+		</events>
 	</global>
 	<frontend>
 		<events>
