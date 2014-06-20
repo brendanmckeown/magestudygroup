@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+	<!--
+	In a custom action controller, render only the contents of a single custom update handle.
+	-->
+	<meeting_three translate="label">
+		<label>Meeting Three Layout Handle</label>
+		<block type="core/text" name="meeting.three.block" output="toHtml">
+			<action method="setText">
+				<text>This is the Meeting Three layout handle.</text>
+			</action>
+		</block>
+	</meeting_three>
+
+</layout>

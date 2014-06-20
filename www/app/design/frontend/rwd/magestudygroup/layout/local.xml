@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+	<default>
+
+		<!--
+		Using layout XML, add a custom block with a template
+		that displays the current date in the left column of all pages.
+		-->
+		<reference name="left">
+			<block type="core/template"
+				name="left.current.date"
+				template="custom/date.phtml"
+				output="toHtml" />
+		</reference>
+
+		<!--
+		Using layout XML, remove the checkout link from the top navigation.
+		This is the right answer...so why doesn't it work?!?
+		-->
+		<reference name="top.links">
+			<remove name="checkout_cart_link" />
+		</reference>
+
+	</default>
+
+	<!--
+	Change the root template to 1column.phtml on the customer account page, using layout XML.
+	-->
+	<customer_account_index>
+		<reference name="root">
+			<action method="setTemplate">
+				<template>page/1column.phtml</template>
+			</action>
+		</reference>
+	</customer_account_index>
+
+</layout>

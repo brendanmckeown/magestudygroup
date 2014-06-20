@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category    MageStudyGroup
+ * @package     MageStudyGroup_MeetingThree
+ */
+-->
+<config>
+	<modules>
+		<MageStudyGroup_MeetingThree>
+			<version>0.1.0</version>
+		</MageStudyGroup_MeetingThree>
+	</modules>
+	<global>
+		<blocks>
+			<page>
+				<rewrite>
+					<html_breadcrumbs>MageStudyGroup_MeetingThree_Block_Page_Html_Breadcrumbs</html_breadcrumbs>
+				</rewrite>
+			</page>
+			<meetingthree>
+				<class>MageStudyGroup_MeetingThree_Block</class>
+			</meetingthree>
+		</blocks>
+		<helpers>
+			<meetingthree>
+				<class>MageStudyGroup_MeetingThree_Helper</class>
+			</meetingthree>
+		</helpers>
+	</global>
+	<frontend>
+		<routers>
+			<meetingthree>
+				<use>standard</use>
+				<args>
+					<module>MageStudyGroup_MeetingThree</module>
+					<frontName>meetingthree</frontName>
+				</args>
+			</meetingthree>
+		</routers>
+		<layout>
+			<updates>
+				<meetingthree>
+					<file>meetingthree.xml</file>
+				</meetingthree>
+			</updates>
+		</layout>
+	</frontend>
+</config>

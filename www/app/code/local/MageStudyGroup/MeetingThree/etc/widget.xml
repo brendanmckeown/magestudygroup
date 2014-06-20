@@ -1,0 +1,13 @@
+ <?xml version="1.0"?>
+<!--
+/**
+ * @category    MageStudyGroup
+ * @package     MageStudyGroup_MeetingThree
+ */
+-->
+<widgets>
+    <meetingthree_image type="meetingthree/image">
+        <name>Bordered Image Widget</name>
+        <description type="desc">The widget description.</description>
+    </meetingthree_image>
+</widgets>
