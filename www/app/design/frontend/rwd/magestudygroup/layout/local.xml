@@ -10,7 +10,7 @@
 		<reference name="left">
 			<block type="core/template"
 				name="left.current.date"
-				template="custom/date.phtml"
+				template="meetingthree/date.phtml"
 				output="toHtml" />
 		</reference>
 

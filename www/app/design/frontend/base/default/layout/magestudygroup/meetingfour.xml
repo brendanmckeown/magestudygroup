@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+Create a frontend form block that allows visitors
+to add comments to category and product pages.
+-->
+
+<layout version="0.1.0">
+
+	<meetingfour_comment_form>
+		<reference name="content">
+			<!-- this weird hack makes the 'after' block attribute work -->
+			<action method="unsetChild">
+				<block>meetingfour.comment.form</block>
+			</action>
+			<!-- block type (before slash) must match config node -->
+			<block type="magestudygroup_meetingfour/comment_form"
+				name="meetingfour.comment.form"
+				template="magestudygroup/meetingfour/comment/form.phtml"
+				after="category.products" />
+
+		</reference>
+	</meetingfour_comment_form>
+
+	<catalog_category_default>
+		<update handle="meetingfour_comment_form"/>
+	</catalog_category_default>
+
+	<catalog_category_layered>
+		<update handle="meetingfour_comment_form"/>
+	</catalog_category_layered>
+
+	<catalog_category_layered_nochildren>
+		<update handle="meetingfour_comment_form"/>
+	</catalog_category_layered_nochildren>
+
+	<catalog_product_view>
+		<update handle="meetingfour_comment_form"/>
+	</catalog_product_view>
+
+</layout>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<MageStudyGroup_MeetingFour>
+			<active>true</active>
+			<codePool>local</codePool>
+		</MageStudyGroup_MeetingFour>
+	</modules>
+</config>

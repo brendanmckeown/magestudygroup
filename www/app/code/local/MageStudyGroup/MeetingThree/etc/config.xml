@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!--
 /**
  * @category    MageStudyGroup
@@ -13,14 +13,14 @@
 	</modules>
 	<global>
 		<blocks>
+			<meetingthree>
+				<class>MageStudyGroup_MeetingThree_Block</class>
+			</meetingthree>
 			<page>
 				<rewrite>
 					<html_breadcrumbs>MageStudyGroup_MeetingThree_Block_Page_Html_Breadcrumbs</html_breadcrumbs>
 				</rewrite>
 			</page>
-			<meetingthree>
-				<class>MageStudyGroup_MeetingThree_Block</class>
-			</meetingthree>
 		</blocks>
 		<helpers>
 			<meetingthree>
@@ -46,4 +46,11 @@
 			</updates>
 		</layout>
 	</frontend>
+	<adminhtml>
+		<layout>
+			<updates>
+
+			</updates>
+		</layout>
+	</adminhtml>
 </config>

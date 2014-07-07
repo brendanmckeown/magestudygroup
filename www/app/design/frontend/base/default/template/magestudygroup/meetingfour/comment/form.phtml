@@ -1,0 +1,23 @@
+<?php
+/**
+ * Create a frontend form block that allows visitors
+ * to add comments to category and product pages.
+ */
+?>
+
+<div>
+	<h1>Comments Form</h1>
+	<form action="<?php echo $this->getFormAction() ?>" method="post">
+		<div>
+			<label for="email"><?php echo $this->__('Email') ?></label>
+			<input type="email" name="email" required />
+		</div>
+		<div>
+			<label for="comment"><?php echo $this->__('Comment') ?></label>
+			<textarea name="comment" required></textarea>
+		</div>
+		<div>
+			<button type="submit"><?php echo $this->__('Submit') ?></button>
+		</div>
+	</form>
+</div>

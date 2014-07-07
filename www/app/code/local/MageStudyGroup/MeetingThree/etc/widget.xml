@@ -1,13 +1,52 @@
- <?xml version="1.0"?>
+<?xml version="1.0"?>
 <!--
 /**
- * @category    MageStudyGroup
- * @package     MageStudyGroup_MeetingThree
+ * Create a frontend widget with a JavaScript color picker form element and image upload functionality
+ in the widget form. When rendering, the widget displays the image with a border of the chosen color.
+ You can use the color picker library found in the js/jscolor/ directory in the Magento folder.
+ For documentation, refer to the project home page at http://jscolor.com.
+ *
+ * @category	MageStudyGroup
+ * @package		MageStudyGroup_MeetingThree
  */
 -->
 <widgets>
-    <meetingthree_image type="meetingthree/image">
-        <name>Bordered Image Widget</name>
-        <description type="desc">The widget description.</description>
-    </meetingthree_image>
+
+	<meetingthree_image type="meetingthree/widget_image" translate="name description" module="meetingthree">
+
+		<name>Bordered Image</name>
+		<description>Adds an uploaded image with a border</description>
+
+		<js>jscolor/jscolor.js</js>
+
+		<parameters>
+
+			<image translate="label">
+				<label>Image</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>label</type>
+				<sort_order>10</sort_order>
+				<helper_block>
+					<type>meetingthree/adminhtml_widget_image</type>
+					<data>
+						<button translate="open">
+							<open>Choose an image</open>
+						</button>
+					</data>
+				</helper_block>
+			</image>
+
+			<alt_text translate="label">
+				<label>Image Alt Text</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>text</type>
+				<sort_order>20</sort_order>
+			</alt_text>
+
+		</parameters>
+
+	</meetingthree_image>
+
 </widgets>

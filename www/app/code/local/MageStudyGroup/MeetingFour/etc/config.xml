@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @package    MageStudyGroup
+ * @module     MageStudyGroup_MeetingFour
+ */
+-->
+<config>
+	<modules>
+		<MageStudyGroup_MeetingFour>
+			<version>0.0.1</version>
+		</MageStudyGroup_MeetingFour>
+	</modules>
+	<global>
+		<blocks>
+			<magestudygroup_meetingfour>
+				<class>MageStudyGroup_MeetingFour_Block</class>
+			</magestudygroup_meetingfour>
+		</blocks>
+		<helpers>
+			<magestudygroup_meetingfour>
+				<class>MageStudyGroup_MeetingFour_Helper</class>
+			</magestudygroup_meetingfour>
+		</helpers>
+		<models>
+			<magestudygroup_meetingfour>
+				<class>MageStudyGroup_MeetingFour_Model</class>
+				<resourceModel>magestudygroup_meetingfour_resource</resourceModel>
+			</magestudygroup_meetingfour>
+			<magestudygroup_meetingfour_resource>
+				<class>MageStudyGroup_MeetingFour_Model_Resource</class>
+				<entities>
+					<comment>
+						<table>msg_meetingfour_comment</table>
+					</comment>
+				</entities>
+			</magestudygroup_meetingfour_resource>
+		</models>
+		<resources>
+			<msg_meetingfour_setup>
+				<setup>
+					<module>MageStudyGroup_MeetingFour</module>
+				</setup>
+			</msg_meetingfour_setup>
+		</resources>
+	</global>
+	<frontend>
+		<routers>
+			<magestudygroup_meetingfour>
+				<use>standard</use>
+				<args>
+					<module>MageStudyGroup_MeetingFour</module>
+					<frontName>meetingfour</frontName>
+				</args>
+			</magestudygroup_meetingfour>
+		</routers>
+		<layout>
+			<updates>
+				<magestudygroup_meetingfour>
+					<file>magestudygroup/meetingfour.xml</file>
+				</magestudygroup_meetingfour>
+			</updates>
+		</layout>
+	</frontend>
+</config>
